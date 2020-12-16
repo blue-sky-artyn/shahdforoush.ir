@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!-- for bing -->
+    <meta name="msvalidate.01" content="49737C17C12333B574FBCD87CECC7541" />
+
+    <!-- For SEO -->
+    <meta name="description" content="شهد فروش,حکیم باشی,عسل حکیم باشی,فروش عسل,فروش عسل طبیعی,عسل دارویی,بره موم" />
+    <meta name="keywords" content="مرکز فروش عسل حکیم باشی اولین و تخصصی ترین مرکز فروش عسل طبیعی و دارویی.فروش فراورده های عسل مانند بره موم و عسل با خاصیت دارویی و قویترین مسکن دنیا." />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+    <!-- Mobile Specific Metas
+    +++++++++++++++++++++++++++ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>عسل حکیم باشی-فروش عسل طبیعی</title>
+    
+    <!-- Styles
+    +++++++++++++ -->	
+
+	<%--<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />--%>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/theme.css" />
+	<!--<link rel="stylesheet" type="text/css" href="css/colors/color-default.css" id="theme_color">-->
+    
+    <!-- Scripts
+    +++++++++++++ -->
+	
+    <!--on line java script code for slider -->
+
+    <%--<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.2/jquery-ui.js" type="text/javascript"></script>--%>
+    
+    <!--off line java script code for slider -->
+    <script type="text/javascript" src="js_s/jquery-1.7.2.min.js"></script>
+    <script src="js_s/jquery-ui.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="js/jquery.onebyone.min.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+    <!-- Demo Panel -->
+	<script type="text/javascript" src="js/color_panel.js"></script>
+	
+
+    <script type="text/javascript" src="zepto.js"></script>
+    <link type="text/javascript" href="html5shiv.js" />
+
+    <link href='http://alimd.github.io/libs/1fonts/1.4/1fonts.css' rel='stylesheet' type='text/css' />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <h1 style="display:none;">عسل حکیم باشی</h1>
+    <nav>
+        <ul style="display:none;">
+            <li>عسل حکیم باشی</li>
+            <li>حکیم باشی</li>
+            <li>شهد فروش</li>
+            <li>فروش عسل</li>
+            <li>فروش عسل طبیعی</li>
+            <li>عسل دارویی</li>
+            <li>ژل رویال</li>
+            <li>بره موم</li>
+            <li>عسل طبیعی</li>
+            <li>مرکز تخصصی عسل</li>
+        </ul>
+    </nav>
+     <!-- H E A D E R -->
+	<header style="background-color: orange;">
+        <div class="header_wrapper container">
+            <a href="Default.aspx" class="logo"><img src="img/logo.png" alt="hakim bashi" width="222" height="43" class="logo_def" /><img src="img/logo.png" alt="hakim bashi" width="222" height="43" class="logo_retina" /></a>
+            <div class="slogan"><span class="common_font" style="width: 38%;">فروش عسل طبیعی در مشهدوایران 09153191053   </span><hr /></div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="service.aspx">خدمات</a></li>
+
+                    <li><a href="contact.aspx">ارتباط با ما</a></li>
+
+                    <li><a href="javascript:void(0)">درباره ما</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.aspx">فعالیت ها</a></li>
+                            <li><a href="faq.aspx">سوالات رایج</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="javascript:void(0)">بخش فروش</a>
+                        <ul class="sub-menu">
+                            <li><a href="order-online.aspx">ثبت سفاش</a></li>
+                            <%--<li><a href="order1.aspx">فروش آنلاین</a></li>--%>
+                        </ul>
+                    </li>
+
+                    <li><a href="porfolio-honey.aspx">معرفی محصولات</a></li>
+
+                    <li><a href="Default.aspx">صفحه اصلی</a></li>                
+                </ul><!-- .menu -->
+            </nav>
+            <nav class="mobile_header">
+                <select id="mobile_select"></select>
+            </nav>
+        </div><!-- .header_wrapper -->
+      <div class="clear"></div>
+	</header>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+    <hr class="light" />
+    <footer>
+    	<div class="footer_wrapper container">
+            <a href="Default.aspx" class="logo"><img src="img/logo_footer.png" alt="hakim bashi" width="222" height="43" class="logo_def" /><img src="img/retina/logo_footer.png" alt="hakim bashi" width="222" height="43" class="logo_retina" /></a>
+            <div class="copyright"></div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="login.aspx">مدیریت</a></li>
+                    <li><a href="#">سوالات رایج</a></li>
+                    <li><a href="contact.aspx">ارتباط باما</a></li>
+                    <li><a href="about.aspx">درباره ما</a></li>
+                    <li><a href="order.aspx">بخش فروش</a></li>
+                    <li><a href="porfolio-honey.aspx">معرفی محصولات</a></li>
+                    <li><a href="Default.aspx">صفحه اصلی</a></li>                
+                </ul><!-- .menu -->
+            </nav>       
+            <div class="footer_tools">
+                <%--<ul class="footer_socials main_socials">
+                    <li><a href="#" class="ico_social-facebook" title="Facebook"></a></li>
+                    <li><a href="#" class="ico_social-twitter" title="Twitter"></a></li>
+                    <li><a href="#" class="ico_social-flickr" title="Flickr"></a></li>
+                    <li><a href="#" class="ico_social-vimeo" title="Vimeo"></a></li>
+                    <li><a href="#" class="ico_social-tumbler" title="Tumblr"></a></li>
+                    <li><a href="#" class="ico_social-delicious" title="Delicious"></a></li>
+                </ul>  --%>          
+            	<div class="footer_search">
+                    <div class="search_form">
+                        <asp:Label ID="lbl_username" runat="server" Text="کاربر: " Font-Names="tahoma" Font-Bold="True"></asp:Label>
+                        <asp:Label ID="lbl_lgoin" runat="server" Text="مهمان" Font-Names="tahoma" Font-Bold="True"></asp:Label>
+
+                        <asp:LinkButton ID="lnk_status" runat="server" Font-Names="tahoma" 
+                            Font-Italic="True" onclick="lnk_login_Click"></asp:LinkButton>
+                    </div>           
+                </div>
+                <div class="clear"></div>                
+            </div>
+        </div>
+	</footer>
+
+    </form>
+</body>
+</html>
