@@ -23,12 +23,12 @@
         <form id="form1" runat="server" class="formoid-default box_shadows" style="background-color:#FFFFFF;font-size:14px;font-family:Tahoma,Geneva,sans-serif;color:#666666;width:480px;margin-top: 12%;" title="مرکز فروش عسل" method="post">
 	        <div class="element-text"  title="login to administrator">
                 <h2 class="title">ورود به صفحه مدیریت</h2>
-                <img src="img/logo_footer.png" />
+                <img src="img/logo_footer.png" alt="shahdforoush website"/>
             </div>
 	        
             <div class="element-email" >
-                <label class="title font-common">ایمیل</label>
-                <asp:TextBox ID="txt_email" runat="server" type="email"></asp:TextBox>
+                <label for="txt_email" class="title font-common">نام کاربری</label>
+                <asp:TextBox ID="txt_email" runat="server"></asp:TextBox>
             </div>
 
 	        <div class="element-password" >

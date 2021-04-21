@@ -4,70 +4,69 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using honeyBL;
+//using honeyBL;
+using bluesky.artyn;
+using Cruder.Core;
 
 public partial class _Default : System.Web.UI.Page
 {
-    tblMainCenterCollection DetailCenter = tblMainCenter.readall();
-    tblNewsCollection DetailFooter = tblNews.readall();
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if save fact
-        string code_s;
-        if ((Request.QueryString["code"] != null))
-        {
-            code_s = Request.QueryString["code"];
-            fact_no.InnerText = "شماره سفارش شما :" + code_s ;
-        }
-       
-
         try
         {
-            lbl_hdr_main1.Text = DetailCenter[Convert.ToInt32(DetailCenter.Count - 1)].header;
-            lbl_detail_main1.Text = DetailCenter[Convert.ToInt32(DetailCenter.Count - 1)].detail;
+            #region News 
+            tblNewsDetailsCollection newsTbl = new tblNewsDetailsCollection();
+            newsTbl.ReadList();
 
-            lbl_hdr_main2.Text = DetailCenter[Convert.ToInt32(DetailCenter.Count - 2)].header;
-            lbl_detail_main2.Text = DetailCenter[Convert.ToInt32(DetailCenter.Count - 2)].detail;
+            string newsStr = string.Empty;
 
-            lbl_hdr_main3.Text = DetailCenter[Convert.ToInt32(DetailCenter.Count - 3)].header;
-            lbl_detail_main3.Text = DetailCenter[Convert.ToInt32(DetailCenter.Count - 3)].detail;
+            for (int i = newsTbl.Count - 1; i >= 0; i--)
+            {
+                newsStr += "<div class='span3 module_cont module_iconboxes'><div class='shortcode_iconbox'>" +
+                               "<img src='" + newsTbl[i].topPageFileAddr + "' alt='' />" +
+                               "<h4>" + newsTbl[i].newsDetTitle + "</h4>" +
+                               "<p style='width: 100%;'>" + newsTbl[i].newsDetGist + "</p>" +
+                               "</div></div>";
+            }
 
-            lbl_hdr_main4.Text = DetailCenter[Convert.ToInt32(DetailCenter.Count - 4)].header;
-            lbl_detail_main4.Text = DetailCenter[Convert.ToInt32(DetailCenter.Count - 4)].detail;
+            newsHTML.InnerHtml = newsStr;
+            #endregion
+
+
+            //if save fact
+            string code_s;
+            if ((Request.QueryString["code"] != null))
+            {
+                code_s = Request.QueryString["code"];
+                fact_no.InnerText = "شماره سفارش شما :" + code_s;
+            }
+
+            #region information
+            tblInformationDetailCollection infoTbl = new tblInformationDetailCollection();
+            infoTbl.ReadList();
+
+            string infoStr = string.Empty;
+
+            for (int i = infoTbl.Count - 1; i >= 0; i--)
+            {
+                infoStr += "<li><div class='item'>" +
+                        "<div class='img_block'><img class='img_footer' style='width:260px;' src='" + infoTbl[i].frontFile + "' alt='عسل شهد فروش' />" +
+                        "</div><div class='carousel_title'>" +
+                        "<h4 class='featured_ico_video'>" + infoTbl[i].infDetailTitle + "</h4>" +
+                        "</div><div class='carousel_desc'>" +
+                        "<div class='exc common_font' style='font-size:10pt;line-height: 20px;font-weight: bold;overflow: hidden;'>" + infoTbl[i].infDetailsGist + "</div>" +
+                        "</div></div></li>";
+            }
+
+            infoHtml.InnerHtml = infoStr;
+            #endregion
 
         }
         catch (Exception)
         {
-            lbl_hdr_main1.Text = "روال انجام کار با شکست مواجه شد.";
-        }
-
-        //footer detail
-
-        try
-        {
-            lbl1.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 0)].title;
-            lbla.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 0)].detail;
-
-            lbl2.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 1)].title;
-            lblb.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 1)].detail;
-
-            lbl3.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 2)].title;
-            lblc.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 2)].detail;
-
-            lbl4.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 3)].title;
-            lbld.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 3)].detail;
-
-            lbl5.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 4)].title;
-            lble.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 4)].detail;
-
-            lbl6.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 5)].title;
-            lblf.Text = DetailFooter[Convert.ToInt32(DetailCenter.Count - 5)].detail;
-        }
-        catch (Exception)
-        {
-            lbl_hdr_main1.Text = "روال انجام کار با شکست مواجه شد.";
+            newsHTML.InnerText = "روال انجام کار با شکست مواجه شد.";
         }
     }
-    
+
 }

@@ -20,20 +20,34 @@
                                             <div class="filter_navigation">
                                                 <ul id="options" class="splitter">
                                                     <li>
-                                                        <ul data-option-key="filter" class="optionset">
+                                                        <ul id="productGrpHtml" runat="server" data-option-key="filter" class="optionset">
                                                             <li class="selected"><a data-option-value="*" href="#filter">انواع محصولات</a></li>
-                                                            <li><a title="یک گزینه را انتخاب کنید" data-option-value=".accounting" href="#filter">عسل چند گیاه</a></li>
-                                                            <li><a title="یک گزینه را انتخاب کنید" data-option-value=".programs" href="#filter">عسل تک گل</a></li>
-                                                            <li><a title="یک گزینه را انتخاب کنید" data-option-value=".promotion" href="#filter">سایر محصولات</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </div><!-- .filter_navigation -->
                                         </div><!-- .filter_block -->
 
-                                        <div class="portfolio_block image-grid columns2" id="list">
+                                        <div runat="server" class="portfolio_block image-grid columns2" id="list" ClientIDMode="Static">
 
-                                            <asp:PlaceHolder ID="PlaceHolder" runat="server"></asp:PlaceHolder>
+
+
+                                            <div data-category="portraits" class="accounting element">
+                                                <div class="filter_img">
+                                                    <a href="portfolio_post.html">
+                                                        <img src="img/portfolio/portfolio1.jpg" alt="" width="570" height="400" />
+                                                        <span class="post_type post_type_video"></span>
+                                                        <div class="portfolio_dscr"><div class="wrap_padding">
+                                                            Egestas &amp; Mauris Dolor net vestibulum sodales mas dapibus ridic.
+                                                        </div></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+
+
+
+
 
                                         </div><!-- .portfolio_block -->
                                     </div><!-- .module_portfolio -->

@@ -4,19 +4,20 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using honeyBL;
+using Cruder.Core;
+using bluesky.artyn;
 
 public partial class login : System.Web.UI.Page
 {
-    public tblManager CurrentMember
+    public tblAdmin CurrentMember
     {
         get
         {
-            if (Session["tblManager"] == null)
+            if (Session["tblAdmin"] == null)
             {
                 return null;
             }
-            else return ((tblManager)Session["tblManager"]);
+            else return ((tblAdmin)Session["tblAdmin"]);
 
         }
     }
@@ -27,15 +28,15 @@ public partial class login : System.Web.UI.Page
     }
     protected void btn_login_Click(object sender, EventArgs e)
     {
-        tblManager memberlist = tblManager.logincheck(txt_email.Text, txt_password.Text);
+        tblAdmin memberlist = tblAdmin.loginCheck(txt_email.Text, txt_password.Text);
         if (memberlist == null)
         {
             lbl_status.Visible = true;
         }
         else
         {
-            Session["tblManager"] = memberlist;
-            Response.Redirect("cp/main.aspx");
+            Session["tblAdmin"] = memberlist;
+            Response.Redirect("admin/default.aspx");
         }
     }
     protected void btn_return_Click(object sender, EventArgs e)

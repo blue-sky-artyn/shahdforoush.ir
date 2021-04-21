@@ -6,27 +6,40 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Net;
 using System.Drawing;
-using honeyBL;
+
+using bluesky.artyn;
+using Cruder.Core;
 
 public partial class contact : System.Web.UI.Page
 {
-    tblCompanyCollection list = tblCompany.readall();
+
 
     protected void Page_Load(object sender, EventArgs e)
     {
         try
         {
-            Literal addr = new Literal();
-            addr.Text = "<div class=\"continfo_item common_font\" style=\"text-align: left;\">"+ list[0].addr +"<span style=\"direction: rtl;margin-top: 3%;font-size: larger;text-shadow: gray 1px 1px 3px;margin-left: 95%;color: orange;\">آدرس: </span></div>";
-            PlaceHolder.Controls.Add(addr);
+            tblCompanyCollection companyTbl = new tblCompanyCollection();
+            companyTbl.ReadList();
 
-            Literal tel = new Literal();
-            tel.Text = "<div class=\"continfo_item\"><span style\"direction: ltr;margin-top: 3%;font-size: larger;text-shadow: gray 1px 1px 3px;margin-left: -16px;color: orange;\"> </span>" + list[0].tel_co + "</div>";
-            PlaceHolder.Controls.Add(tel);
+            string coDetStr = string.Empty;
+            if (companyTbl.Count > 0)
+            {
+                aboutHtml.InnerText = companyTbl[0].CoDetail;
+                if (companyTbl[0].CoAddr.Length > 0)
+                    coDetStr += "<li><p><span>آدرس:</span>"+companyTbl[0].CoAddr + "</p></li>";
+                if (companyTbl[0].Tel.Length > 0)
+                    coDetStr += "<li><p><span>تلفن:</span>"+companyTbl[0].Tel + "</p></li>";
+                if(companyTbl[0].Phone.Length > 0)
+                    coDetStr += "<li><p><span>فکس:</span>"+companyTbl[0].Phone + "</p></li>";
+                if (companyTbl[0].Email.Length > 0)
+                    coDetStr += "<li><p><span>ایمیل:</span>"+companyTbl[0].Email + "</p></li>";
+                if (companyTbl[0].Instagram.Length > 0)
+                    coDetStr += "<li><p><span>Instagram:</span>"+companyTbl[0].Instagram + "</p></li>";
+                if(companyTbl[0].Telegram.Length > 0)
+                    coDetStr += "<li><p><span>Telegram:</span>"+companyTbl[0].Telegram + "</p></li>";
+            }
 
-            Literal email = new Literal();
-            email.Text = "<div class=\"continfo_item\" style=\"left: 45px;\"><span style\"direction: ltr;margin-top: 3%;font-size: larger;text-shadow: gray 1px 1px 3px;margin-left: -16px;color: orange;\"><a href=\"" + list[0].name_co + "\">" + list[0].name_co + "</a></div>";
-            PlaceHolder.Controls.Add(email);
+            contactDetHtml.InnerHtml = coDetStr;
         }
         catch (Exception)
         {

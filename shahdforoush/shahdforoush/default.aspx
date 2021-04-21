@@ -71,7 +71,7 @@
                                         <div class="shortcode_promoblock ">
                                             <div class="row-fluid">
                                                 <div class="span9 promo_text_block">
-                                                    <h4>با تکمیل فرم ثبت سفارش،در اسرع وقت محصول خریداری شده به دست شما میرسد/ /خرید آنلاین به زودی به امکانات سایت اضافه می شود.</h4>
+                                                    <h4>با تکمیل فرم ثبت سفارش،در اسرع وقت محصول خریداری شده به دست شما میرسد.</h4>
                                                     <h1 id="fact_no" runat="server" style="margin-top: 15px;" >خرید عسل اصلی،عسل طبیعی و محصول نمونه</h1>
                                                 </div>
                                                 <div class="span3 promo_button_block">
@@ -84,35 +84,11 @@
                                     <div class="clear"><!-- ClearFIX --></div>                                                                    
                                 </div><!-- .row-fluid -->
     
-                                <div class="row-fluid">
-                                    <div class="span3 module_cont module_iconboxes">
-                                        <div class="shortcode_iconbox">
-                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/img/center/center1.jpg" style="border: 5px solid white;"/>
-                                            <h4><asp:Label ID="lbl_hdr_main1" runat="server" Text="Label" Font-Names="tahoma" style="font-weight: bold;color: orange;text-shadow: 0px 2px 3px #666;"></asp:Label></h4>
-                                            <p style="width: 100%;"><asp:Label ID="lbl_detail_main1" runat="server" Text="Label" Font-Names="b nazanin" style="font-size:12pt;line-height:25px;font-weight: bold;"></asp:Label></p>
-                                        </div>
-                                    </div><!--.module_cont -->
-                                    <div class="span3 module_cont module_iconboxes">
-                                        <div class="shortcode_iconbox">
-                                            <asp:Image ID="Image2" runat="server" ImageUrl="~/img/center/center2.jpg" style="border: 5px solid white;"/>
-                                            <h4><asp:Label ID="lbl_hdr_main2" runat="server" Text="Label" Font-Names="tahoma" style="font-weight: bold;color: orange;text-shadow: 0px 2px 3px #666;"></asp:Label></h4>
-                                            <p style="width: 100%;"><asp:Label ID="lbl_detail_main2" runat="server" Text="Label" Font-Names="b nazanin" style="font-size:12pt;line-height:25px;font-weight: bold;"></asp:Label></p>
-                                        </div>
-                                    </div><!--.module_cont -->
-                                    <div class="span3 module_cont module_iconboxes">
-                                        <div class="shortcode_iconbox">
-                                            <asp:Image ID="Image3" runat="server" ImageUrl="~/img/center/center3.jpg" style="border: 5px solid white;"/>
-                                            <h4><asp:Label ID="lbl_hdr_main3" runat="server" Text="Label" Font-Names="tahoma" style="font-weight: bold;color: orange;text-shadow: 0px 2px 3px #666;"></asp:Label></h4>
-                                            <p style="width: 100%;"><asp:Label ID="lbl_detail_main3" runat="server" Text="Label" Font-Names="b nazanin" style="font-size:12pt;line-height:25px;font-weight: bold;"></asp:Label></p>
-                                        </div>
-                                    </div><!--.module_cont -->
-                                    <div class="span3 module_cont module_iconboxes">
-                                        <div class="shortcode_iconbox">
-                                            <asp:Image ID="Image4" runat="server" ImageUrl="~/img/center/center4.jpg" style="border: 5px solid white;"/>
-                                            <h4><asp:Label ID="lbl_hdr_main4" runat="server" Text="Label" Font-Names="tahoma" style="font-weight: bold;color: orange;text-shadow: 0px 2px 3px #666;"></asp:Label></h4>
-                                            <p style="width: 100%;"><asp:Label ID="lbl_detail_main4" runat="server" Text="Label" Font-Names="b nazanin" style="font-size:12pt;line-height:25px;font-weight: bold;"></asp:Label></p>
-                                        </div>
-                                    </div><!--.module_cont -->
+                                <div id="newsHTML" runat="server" class="row-fluid">
+
+                                    
+
+                                    
                                 </div><!-- .row-fluid -->
     
                                 <hr class="light" />                            
@@ -121,13 +97,13 @@
                                     
                                     <div class="span6 module_cont module_text_area">
                                     	<div class="demo_frame">
-                                            <img src="img/home2.jpg" />
+                                            <img src="img/home2.jpg" alt="عسل حکیم باشی، شهدفروش"/>
                                         </div>
                                     </div>
                                     
                                     <div class="span6 module_cont module_text_area">
                                     	<div class="demo_frame">
-                                            <img src="img/home1.jpg" />
+                                            <img src="img/home1.jpg" alt="عسل حکیم باشی، شهدفروش"/>
                                         </div>
                                     </div>
                                 </div><!-- .row-fluid -->
@@ -139,7 +115,7 @@
                                         <h4 class="headInModule">دانستنی هایی در مورد عسل طبیعی</h4>
                                         <div class="featured_slider">
                                             <div class="carouselslider featured_posts items4" data-count="4">
-                                                <ul class="item_list">
+                                                <ul id="infoHtml" runat="server" class="item_list">
                                                     <li>
                                                         <div class="item">
                                                             <div class="img_block"><img class="img_footer" style="width:260px;" src="img/pictures/carousel_blog1.jpg" /></div>

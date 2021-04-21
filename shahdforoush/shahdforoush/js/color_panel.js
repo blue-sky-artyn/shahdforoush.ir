@@ -57,7 +57,7 @@ $(document).ready(function(){
 	$('head').append('<link rel="stylesheet" type="text/css" href="css/colors/' + set_color + '.css" id="theme_color">');
 
 	//Start Control Panel Script
-	$('body').append('<div class="demo_panel opacity showed"><a href="javascript:void(0)" class="panel_toggler"></a><span class="panel_title">عسل حکمت</span></div>');
+	$('body').append('<div class="demo_panel opacity showed"><a href="javascript:void(0)" class="panel_toggler"></a><span class="panel_title">عسل حکیم باشی</span></div>');
 	demo_panel = $('body').find('.demo_panel');
 	
 	

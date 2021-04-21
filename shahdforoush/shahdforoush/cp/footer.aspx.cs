@@ -25,7 +25,7 @@ public partial class cp_footer : System.Web.UI.Page
             lists.ReadList(Cruder.Core.Criteria.NewCriteria(tblNews.Columns.id, Cruder.Core.CriteriaOperators.Equal, 1));
             lists[0].title = txt_titr1.Text;
             lists[0].detail = txt_detail1.Text;
-            lists[0].date_news = "test"
+            lists[0].date_news = "test";
             lists.UpdateList(true);
             
         }

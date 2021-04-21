@@ -1,6 +1,21 @@
 ﻿<%@ Page Title="خدمات فروش عسل طبیعی" Language="C#" MasterPageFile="~/Master.master" AutoEventWireup="true" CodeFile="service.aspx.cs" Inherits="service" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style>
+        .module_text_area {
+            text-align: right;
+            direction: rtl;
+        } 
+        .module_text_area p,h5 {
+            padding: 15px;
+            text-align: right;
+            direction: rtl;
+        }
+        .module_text_area h5 {
+            width: fit-content;
+            border-bottom: 1px solid;
+        }
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -14,17 +29,16 @@
                             <div class="contentarea">
 
 
-                             <div class="row-fluid">
+                             <div id="serviceHtml" runat="server" class="row-fluid">                  
+                                 <h4 class="headInModule" style="text-align: right; direction: rtl; margin-bottom: 50px; margin-top: 10px; font-size: 28pt;">خدمات</h4>
                                     <div class="span12 module_cont module_text_area">
-                                        <h4 class="headInModule" style="text-align:right;direction:rtl;margin-bottom: 50px;margin-top: 10px;font-size: 28pt;"><a name="anchor14"></a>خدمات</h4>
-                                        <img src="img/service1.jpg" class="alignleft video_frame box_shadows"/>
+                                        <img src="img/service1.jpg" class="alignleft video_frame box_shadows" alt="عسل حکیم باشی"/>
                                         <p style="padding: 15px;"><asp:Label ID="lbl_left_row1" runat="server" Text="Label" Font-Bold="True" Font-Names="tahoma"></asp:Label></p>
                                         <p style="padding: 15px;"><asp:Label ID="lbl_left_row2" runat="server" Text="Label" Font-Bold="True" Font-Names="tahoma"></asp:Label></p>
-                                        
                                     </div><!-- .module_cont -->
 
                                     <div class="span12 module_cont module_text_area" style="text-align: right;">
-                                    <img src="img/service2.jpg" class="alignright video_frame box_shadows"/>
+                                        <img src="img/service2.jpg" class="alignright video_frame box_shadows" alt="عسل حکیم باشی"/>
                                         <p style="padding: 15px;"><asp:Label ID="lbl_right_row1" runat="server" Text="Label" Font-Bold="True" Font-Names="tahoma" style="margin-right: 10px;"></asp:Label></p>
                                         <p style="padding: 15px;"><asp:Label ID="lbl_rigth_row2" runat="server" Text="Label" Font-Bold="True" Font-Names="tahoma" style="margin-right: 10px;"></asp:Label></p>
                                     </div>

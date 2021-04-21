@@ -4,20 +4,22 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using honeyBL;
+using Cruder.Core;
+using bluesky.artyn;
 
 public partial class about : System.Web.UI.Page
 {
-    tblAboutCollection list = tblAbout.readall();
 
     protected void Page_Load(object sender, EventArgs e)
     {
         try
         {
+            tblCompanyCollection companyTbl = new tblCompanyCollection();
+            companyTbl.ReadList();
 
-            Literal lbl_about = new Literal();
-            lbl_about.Text = "<p>"+ list[Convert.ToInt32(list.Count - 1)].detail +"</p>";
-            PlaceHolder1.Controls.Add(lbl_about);
+            aboutCoHtml.InnerHtml = "<h4 class='headInModule'>مرکز پخش عسل حکیم باشی</h4>";
+            aboutCoHtml.InnerHtml += companyTbl[0].aboutPage;
+
         }
         catch (Exception)
         {

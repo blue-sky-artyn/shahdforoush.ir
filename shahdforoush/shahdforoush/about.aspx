@@ -40,11 +40,11 @@
 
                                                 <div class="oneByOne_item sl_about5">
                                                     <p class="ls5_txt1 font_about blue" data-animate="fadeInUp" style="top: 40px;left: 33%;">با تکمیل فرم خرید در ،محصول خریداری شده خود را در محل دریافت کنید</p>
-                                                    <img src="img/slider/slider1/ls4_txt9.png" class="ls3_txt1" data-animate="fadeInLeft" style="bottom: 0px;left: 69%;"/>
+                                                    <img src="img/slider/slider1/ls4_txt9.png" class="ls3_txt1" data-animate="fadeInLeft" style="bottom: 0px;left: 69%;" alt="باشگاه مشتریان عسل حکیم باشی"/>
 
                                                     <p class="ls4_txt1 common_font" data-animate="fadeInRight" style="color: rgb(245, 245, 245);top: 35%;right: 32%;font-weight: bold;text-shadow: orange -5px 5px 3px;">هم اکنون ثبت نام کنید...</p>
                                                     <div style=" margin-top: 20%;margin-left: 34%;direction: rtl;">
-                                                        <input type="text" name="field-name" value="ایمیل خود را وارد نمایید..." title="Enter your Email..." class="subscribe_field common_font" />
+                                                        <input type="text" name="field-name" placeholder="ایمیل خود را وارد نمایید..." title="Enter your Email..." class="subscribe_field common_font" />
                                                         <input type="submit" name="submit" class="btn_subscribe btn_about common_font" id="btn_subscribe" onclick="register.aspx" value="ثبت نام!" />
                                                     </div>
                                                     
@@ -70,11 +70,11 @@
                                 </div><!-- .row-fluid -->
 
                                 <div class="row-fluid">
-                                    <div class="span_full module_cont module_text_area common_div">
+                                    <div id="aboutCoHtml" runat="server" class="span_full module_cont module_text_area common_div">
                                         <h4 class="headInModule">مرکز پخش عسل حکیم باشی</h4>
                                         
 
-                                        <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+                                        
 
 
                                     </div>								

@@ -14,11 +14,11 @@
                             <div class="contentarea">
 
                                 <div class="row-fluid">
-                                    <div class="span12 module_cont module_text_area">
+                                    <div id="faqHtml" runat="server" class="span12 module_cont module_text_area">
                                         <h4 class="headInModule common_font"><a name="blockquote"></a>سوالات رایج درباره عسل:</h4>
                                         <br />
                                        
-                                        <asp:PlaceHolder ID="PlaceHolder" runat="server"></asp:PlaceHolder>
+                                        
                                        
                                     </div>								
                                 </div><!-- .row-fluid -->
@@ -34,8 +34,10 @@
                 <div class="right-sidebar-block span3">
                     <aside class="sidebar">
                         <div class="sidepanel widget_nav_menu">
-                            <ul class="menu">
-                                <asp:PlaceHolder ID="place_menu" runat="server"></asp:PlaceHolder>
+                            <ul id="faqQuestionsHtml" runat="server" class="menu">
+
+                                
+
                             </ul>
                         </div>                        
                     </aside>

@@ -4,26 +4,33 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using honeyBL;
+
+using Cruder.Core;
+using bluesky.artyn;
 
 public partial class service : System.Web.UI.Page
 {
-    tblServiceCollection list = tblService.readall();
+    
 
     protected void Page_Load(object sender, EventArgs e)
     {
         try
         {
-            lbl_left_row1.Text = list[Convert.ToInt32(list.Count) - 1].detaol_serv;
-            lbl_left_row2.Text = list[Convert.ToInt32(list.Count) - 2].detaol_serv;
+            tblServicesCollection serviceTbl = new tblServicesCollection();
+            serviceTbl.ReadList();
 
-            lbl_right_row1.Text = list[Convert.ToInt32(list.Count) - 3].detaol_serv;
-            lbl_rigth_row2.Text = list[Convert.ToInt32(list.Count) - 4].detaol_serv;
-
+            string serviceStr = "<h4 class='headInModule' style='text-align: right; direction: rtl; margin-bottom: 50px; margin-top: 10px; font-size: 28pt;'>خدمات</h4>";
+            for (int i = 0; i < serviceTbl.Count; i++)
+            {
+                serviceStr += "<div class='span12 module_cont module_text_area'>" +
+                               "<h5>"+serviceTbl[i].ServiceTitle+"</h5>" +
+                               "<p>" + serviceTbl[i].ServiceDetail + "</p></div>";
+            }
+            serviceHtml.InnerHtml = serviceStr;
         }
         catch (Exception)
         {
-            
+            serviceHtml.InnerHtml = "خطا در بارگذاری اطلاعات.";
         }
     }
 }
