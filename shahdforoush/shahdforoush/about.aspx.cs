@@ -17,8 +17,8 @@ public partial class about : System.Web.UI.Page
             tblCompanyCollection companyTbl = new tblCompanyCollection();
             companyTbl.ReadList();
 
-            aboutCoHtml.InnerHtml = "<h4 class='headInModule'>مرکز پخش عسل حکیم باشی</h4>";
-            aboutCoHtml.InnerHtml += companyTbl[0].aboutPage;
+            //aboutCoHtml.InnerHtml = "<h4 class='headInModule'>مرکز پخش عسل حکیم باشی</h4>";
+            //aboutCoHtml.InnerHtml += companyTbl[0].aboutPage;
 
         }
         catch (Exception)
